@@ -1,0 +1,24 @@
+﻿Q1 
+select * from Customer where Name like "%joe"
+
+Q2
+select p.name from Customer c join Oder o 
+ON c.CustomerId = o.CustomerId
+join OrderProduct op
+ON o.orderId = op.OrderId
+join Product p 
+ON p.prouctid = op.productId
+where c.name = 'joe'
+
+Q3
+make use of Q2
+
+select Sum(p.Price) from Customer c join Oder o 
+ON c.CustomerId = o.CustomerId
+join OrderProduct op
+ON o.orderId = op.OrderId
+join Product p 
+ON p.prouctid = op.productId
+where c.name = 'joe'
+
+
